@@ -13,6 +13,7 @@ def run(flag):
     insertion = {
         0 : 'google-chrome --incognito',
         1 : 'firefox --private-window',
+        2 : 'nautilus ~/Apps/',
         3 : 'nautilus ~/Dropbox/',
         4 : 'nautilus ~/.local/bin/',
         5 : 'cd ~ && sudo ./Apps/arduino-1.8.5/arduino',
@@ -35,6 +36,7 @@ def show_help():
 Options:
   chrome        launch Chrome in incognito mode
   firefox       launch Firefox in a Private Window
+  apps          launch Nautilus with ~/Apps/ open
   dropbox       launch Nautilus with Dropbox root directory open
   local-bin     launch Nautilus with the directory containing local binaries
   arduino       launch Arduino in the system
@@ -50,6 +52,7 @@ if __name__ == '__main__':
         options = {
             'chrome'      :  0,
             'firefox'     :  1,
+            'apps'        :  2,
             'dropbox'     :  3,
             'local-bin'   :  4,
             'arduino'     :  5,

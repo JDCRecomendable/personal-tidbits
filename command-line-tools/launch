@@ -1,0 +1,67 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
+
+import sys
+import subprocess
+
+def run(flag):
+    '''Carry out the process of launching the requested application. This is the
+    first function called when the program is run in the terminal.'''
+    insertion = {
+        0 : 'google-chrome --incognito',
+        1 : 'firefox --private-window',
+        3 : 'nautilus ~/Dropbox/',
+        4 : 'nautilus ~/.local/bin/',
+        5 : 'cd ~ && sudo ./Apps/arduino-1.8.5/arduino',
+        6 : 'cd ~ && ./Apps/eagle-9.1.0/eagle',
+        7 : 'cd ~ && ./Apps/etcher-electron-1.4.4-x86_64/etcher-electron-1.4.4-x86_64.AppImage',
+        8 : 'cd ~ && ./Apps/fritzing-0.9.3b.linux.AMD64/Fritzing',
+        9 : 'cd ~ && ./Apps/peazip_portable-6.6.0.LINUX.x86_64.GTK2/peazip',
+        10: 'cd ~/Apps/tor-browser_en-US/ && ./start-tor-browser.desktop'
+    }
+    try:
+        to_run = insertion[flag]
+        subprocess.run(['bash', '-c', to_run])
+    except KeyError:
+        show_help()
+
+def show_help():
+    '''Show the help documentation for the program.'''
+    help_doc = '''Usage: launch [options]
+
+Options:
+  chrome        launch Chrome in incognito mode
+  firefox       launch Firefox in a Private Window
+  dropbox       launch Nautilus with Dropbox root directory open
+  local-bin     launch Nautilus with the directory containing local binaries
+  arduino       launch Arduino in the system
+  eagle         launch Autodesk Eagle in the system
+  etcher        launch Etcher in the system
+  fritzing      launch Fritzing in the system
+  peazip        launch Peazip in the system
+  tor           launch Tor in the system'''
+    print(help_doc)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        options = {
+            'chrome'      :  0,
+            'firefox'     :  1,
+            'dropbox'     :  3,
+            'local-bin'   :  4,
+            'arduino'     :  5,
+            'eagle'       :  6,
+            'etcher'      :  7,
+            'fritzing'    :  8,
+            'peazip'      :  9,
+            'tor'         : 10
+        }
+        try:
+            run(options[sys.argv[1]])
+        except KeyError:
+            show_help()
+    else:
+        show_help()

@@ -1,5 +1,5 @@
 # Personal Tidbits
-I open-source my own quirkiness here—random tools that make my life a little bit easier.
+I open-source my own tools here—random automation tools that make my life a little bit easier.
 
 ## Tidbits
 * Command Line (CL) Tools

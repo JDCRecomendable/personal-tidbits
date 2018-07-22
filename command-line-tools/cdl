@@ -149,6 +149,103 @@ def prep_str(flag, nav_flag=-1):
                 string += new_string[i]
             else:
                 string += new_string[i] + '\\"'
+
+    # Assist Bash to recognise opening bracket (
+    new_string = string.split('(')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\('
+
+    # Assist Bash to recognise opening bracket [
+    new_string = string.split('[')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\['
+
+    # Assist Bash to recognise opening bracket <
+    new_string = string.split('<')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\<'
+
+    # Assist Bash to recognise opening bracket {
+    new_string = string.split('{')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\{'
+
+    # Assist Bash to recognise closing bracket )
+    new_string = string.split(')')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\)'
+
+    # Assist Bash to recognise closing bracket ]
+    new_string = string.split(']')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\]'
+
+    # Assist Bash to recognise closing bracket >
+    new_string = string.split('>')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\>'
+
+    # Assist Bash to recognise closing bracket }
+    new_string = string.split('}')
+    string = ''
+    if len(new_string) == 1:
+        string = new_string[0]
+    else:
+        for i in range(len(new_string)):
+            if i == len(new_string) - 1:
+                string += new_string[i]
+            else:
+                string += new_string[i] + '\\}'
+
     return 0, string
 
 def run(flag, nav_flag=-1):

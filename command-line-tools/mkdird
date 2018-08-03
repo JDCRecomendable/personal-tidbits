@@ -8,7 +8,12 @@ from datetime import datetime
 import os
 import sys
 
-existing = os.listdir()
+def dir_exists(string):
+    dirs = sorted(os.listdir())
+    for dir in dirs:
+        if string in dir:
+            return True
+    return False
 
 def is_leap(year):
     '''Return True if leap year, else False.'''
@@ -75,10 +80,10 @@ def new_name(variant=0):
     '''Return the proposed name of the directory in the form of "YYMMDD_NN", where NN refers to the serial number of the directory.'''
     template = make_template(variant)
     for i in range(1,10):
-        if template+'0'+str(i) not in existing:
+        if not(dir_exists(template+'0'+str(i))):
             return template+'0'+str(i)
     for i in range(10,100):
-        if template+str(i) not in existing:
+        if not(dir_exists(template+'0'+str(i))):
             return template+str(i)
     return template+'99'
 

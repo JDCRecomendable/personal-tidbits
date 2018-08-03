@@ -22,7 +22,8 @@ def run(flag):
         8 : 'cd ~ && ./Apps/fritzing-0.9.3b.linux.AMD64/Fritzing',
         9 : 'cd ~ && ./Apps/peazip_portable-6.6.0.LINUX.x86_64.GTK2/peazip',
         10: 'cd ~/Apps/tor-browser_en-US/ && ./start-tor-browser.desktop',
-        11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology'
+        11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology',
+        12: 'thunderbird'
     }
     try:
         to_run = insertion[flag]
@@ -37,6 +38,7 @@ def show_help():
 Options:
   chrome        launch Chrome in incognito mode
   firefox       launch Firefox in a Private Window
+  mail          launch Thunderbird
   coursemology  launch the YIJC Coursemology
   apps          launch Nautilus with ~/Apps/ open
   dropbox       launch Nautilus with Dropbox root directory open
@@ -63,7 +65,8 @@ if __name__ == '__main__':
             'fritzing'    :  8,
             'peazip'      :  9,
             'tor'         : 10,
-            'coursemology': 11
+            'coursemology': 11,
+            'mail'        : 12
         }
         try:
             run(options[sys.argv[1]])

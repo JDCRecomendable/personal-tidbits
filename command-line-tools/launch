@@ -23,7 +23,8 @@ def run(flag):
         9 : 'cd ~ && ./Apps/peazip_portable-6.6.0.LINUX.x86_64.GTK2/peazip',
         10: 'cd ~/Apps/tor-browser_en-US/ && ./start-tor-browser.desktop',
         11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology',
-        12: 'thunderbird'
+        12: 'thunderbird',
+        13: 'jupyter-notebook --no-browser'
     }
     try:
         to_run = insertion[flag]
@@ -36,17 +37,17 @@ def show_help():
     help_doc = '''Usage: launch [options]
 
 Options:
-  chrome        launch Chrome in incognito mode
-  firefox       launch Firefox in a Private Window
-  mail          launch Thunderbird
-  coursemology  launch the YIJC Coursemology
   apps          launch Nautilus with ~/Apps/ open
-  dropbox       launch Nautilus with Dropbox root directory open
-  local-bin     launch Nautilus with the directory containing local binaries
   arduino       launch Arduino in the system
+  chrome        launch Chrome in incognito mode
+  coursemology  launch the YIJC Coursemology
+  dropbox       launch Nautilus with Dropbox root directory open
   eagle         launch Autodesk Eagle in the system
   etcher        launch Etcher in the system
+  firefox       launch Firefox in a Private Window
   fritzing      launch Fritzing in the system
+  local-bin     launch Nautilus with the directory containing local binaries
+  mail          launch Thunderbird
   peazip        launch Peazip in the system
   tor           launch Tor in the system'''
     print(help_doc)
@@ -66,7 +67,8 @@ if __name__ == '__main__':
             'peazip'      :  9,
             'tor'         : 10,
             'coursemology': 11,
-            'mail'        : 12
+            'mail'        : 12,
+            'jupyter'     : 13
         }
         try:
             run(options[sys.argv[1]])

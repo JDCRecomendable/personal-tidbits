@@ -46,6 +46,7 @@ Options:
   etcher        launch Etcher in the system
   firefox       launch Firefox in a Private Window
   fritzing      launch Fritzing in the system
+  jupyter       launch Jupyter Notebook without launching a browser
   local-bin     launch Nautilus with the directory containing local binaries
   mail          launch Thunderbird
   peazip        launch Peazip in the system

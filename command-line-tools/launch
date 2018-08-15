@@ -24,7 +24,8 @@ def run(flag):
         10: 'cd ~/Apps/tor-browser_en-US/ && ./start-tor-browser.desktop',
         11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology',
         12: 'thunderbird',
-        13: 'jupyter-notebook --no-browser'
+        13: 'jupyter-notebook --no-browser',
+        14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh'
     }
     try:
         to_run = insertion[flag]
@@ -38,19 +39,20 @@ def show_help():
 
 Options:
   apps          launch Nautilus with ~/Apps/ open
-  arduino       launch Arduino in the system
+  arduino       launch Arduino
   chrome        launch Chrome in incognito mode
-  coursemology  launch the YIJC Coursemology
+  coursemology  launch YIJC Coursemology
   dropbox       launch Nautilus with Dropbox root directory open
-  eagle         launch Autodesk Eagle in the system
-  etcher        launch Etcher in the system
+  eagle         launch Autodesk Eagle
+  etcher        launch Etcher
   firefox       launch Firefox in a Private Window
-  fritzing      launch Fritzing in the system
+  fritzing      launch Fritzing
   jupyter       launch Jupyter Notebook without launching a browser
   local-bin     launch Nautilus with the directory containing local binaries
   mail          launch Thunderbird
-  peazip        launch Peazip in the system
-  tor           launch Tor in the system'''
+  mindmap       launch FreeMind (mind-mapping software)
+  peazip        launch Peazip
+  tor           launch Tor'''
     print(help_doc)
 
 if __name__ == '__main__':
@@ -69,7 +71,8 @@ if __name__ == '__main__':
             'tor'         : 10,
             'coursemology': 11,
             'mail'        : 12,
-            'jupyter'     : 13
+            'jupyter'     : 13,
+            'mindmap'     : 14
         }
         try:
             run(options[sys.argv[1]])

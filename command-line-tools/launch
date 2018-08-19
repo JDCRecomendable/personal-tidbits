@@ -25,7 +25,8 @@ def run(flag):
         11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology',
         12: 'thunderbird',
         13: 'jupyter-notebook --no-browser',
-        14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh'
+        14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh',
+        15: 'cd ~ && ./Apps/whats-app-web-linux-x64/whats-app-web'
     }
     try:
         to_run = insertion[flag]
@@ -52,7 +53,8 @@ Options:
   mail          launch Thunderbird
   mindmap       launch FreeMind (mind-mapping software)
   peazip        launch Peazip
-  tor           launch Tor'''
+  tor           launch Tor
+  whatsapp      launch WhatsApp (desktop program)'''
     print(help_doc)
 
 if __name__ == '__main__':
@@ -72,7 +74,8 @@ if __name__ == '__main__':
             'coursemology': 11,
             'mail'        : 12,
             'jupyter'     : 13,
-            'mindmap'     : 14
+            'mindmap'     : 14,
+            'whatsapp'    : 15
         }
         try:
             run(options[sys.argv[1]])

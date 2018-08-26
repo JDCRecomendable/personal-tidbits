@@ -26,7 +26,9 @@ def run(flag):
         12: 'thunderbird',
         13: 'jupyter-notebook --no-browser',
         14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh',
-        15: 'cd ~ && ./Apps/whats-app-web-linux-x64/whats-app-web'
+        15: 'cd ~ && ./Apps/whats-app-web-linux-x64/whats-app-web',
+        16: 'sudo mu-editor',
+        17: 'anki'
     }
     try:
         to_run = insertion[flag]
@@ -39,6 +41,7 @@ def show_help():
     help_doc = '''Usage: launch [options]
 
 Options:
+  anki          launch Anki
   apps          launch Nautilus with ~/Apps/ open
   arduino       launch Arduino
   chrome        launch Chrome in incognito mode
@@ -52,6 +55,7 @@ Options:
   local-bin     launch Nautilus with the directory containing local binaries
   mail          launch Thunderbird
   mindmap       launch FreeMind (mind-mapping software)
+  mu            launch Mu Editor
   peazip        launch Peazip
   tor           launch Tor
   whatsapp      launch WhatsApp (desktop program)'''
@@ -75,7 +79,9 @@ if __name__ == '__main__':
             'mail'        : 12,
             'jupyter'     : 13,
             'mindmap'     : 14,
-            'whatsapp'    : 15
+            'whatsapp'    : 15,
+            'mu'          : 16,
+            'anki'        : 17
         }
         try:
             run(options[sys.argv[1]])

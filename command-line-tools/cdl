@@ -86,7 +86,7 @@ def prep_str(flag, nav_flag=-1):
         return 1, 'ERROR'
 
     # Assist Bash in recognising special symbols
-    symbol_fix = (' ', "'", '"', '(', '[', '{', '<', ')', ']', '}', '>')
+    symbol_fix = (' ', "'", '"', '(', '[', '{', '<', ')', ']', '}', '>', '&')
     for symbol in symbol_fix:
         string = assist_bash(string, symbol)
 

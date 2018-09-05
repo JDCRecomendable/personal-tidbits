@@ -62,6 +62,10 @@ def prep_str(flag, nav_flag=-1):
         string += 'Projects/'
         string = auto_nav(string, 3)
 
+    # Deal with Media
+    elif flag == 4:
+        string += 'Media/'
+
     # Deal with YIJC 2018 Contents
     elif flag == 2:
         string += 'YIJC/2018/'
@@ -110,6 +114,7 @@ def show_help():
 Options:
   -h, --help      show this help message and exit
   -H, --home      go to the latest directory in ~/Dropbox/HOME/
+  -M, --media     go to ~/Dropbox/Media/
   -P, --projects  go to the latest directory in ~/Dropbox/Projects/
   -Y, --yijc      go to ~/Dropbox/YIJC/
   -n, --nav       based on the given directories flag, go to the latest respective directory in ~/Dropbox/YIJC/
@@ -134,6 +139,8 @@ if __name__ == '__main__':
             '--yijc'    : 1,
             '-P'        : 3,
             '--projects': 3,
+            '-M'        : 4,
+            '--media'   : 4
         }
         try:
             run(options[sys.argv[1]])
@@ -149,7 +156,7 @@ if __name__ == '__main__':
                 '18ph'   : 4,
                 '18cp'   : 5,
                 '18ec'   : 6,
-                '18cca'  : 7,
+                '18cca'  : 7
             }
             try:
                 run(2, nav_options[sys.argv[2]])

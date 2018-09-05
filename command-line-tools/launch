@@ -28,7 +28,8 @@ def run(flag):
         14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh',
         15: 'cd ~ && ./Apps/whats-app-web-linux-x64/whats-app-web',
         16: 'sudo mu-editor',
-        17: 'anki'
+        17: 'anki',
+        18: 'nautilus ~/Music/'
     }
     try:
         to_run = insertion[flag]
@@ -52,10 +53,11 @@ Options:
   firefox       launch Firefox in a Private Window
   fritzing      launch Fritzing
   jupyter       launch Jupyter Notebook without launching a browser
-  local-bin     launch Nautilus with the directory containing local binaries
+  local-bin     launch Nautilus with ~/.local/bin/ open
   mail          launch Thunderbird
   mindmap       launch FreeMind (mind-mapping software)
   mu            launch Mu Editor
+  music         launch Nautilus with Music directory open
   peazip        launch Peazip
   tor           launch Tor
   whatsapp      launch WhatsApp (desktop program)'''
@@ -81,7 +83,8 @@ if __name__ == '__main__':
             'mindmap'     : 14,
             'whatsapp'    : 15,
             'mu'          : 16,
-            'anki'        : 17
+            'anki'        : 17,
+            'music'       : 18
         }
         try:
             run(options[sys.argv[1]])

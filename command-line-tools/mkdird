@@ -31,12 +31,13 @@ def is_leap(year):
 
 def make_template(variant=0):
     '''Return a date string in the form of "YYMMDD_".'''
-    yy = str(datetime.now().year)
-    mm = str(datetime.now().month)
+    datetime_now = datetime.now()
+    yy = str(datetime_now.year)
+    mm = str(datetime_now.month)
     if variant == 0:
-        dd = str(datetime.now().day)
+        dd = str(datetime_now.day)
     elif variant == 1:
-        dd = str(datetime.now().day-1)
+        dd = str(datetime_now.day-1)
         if dd == '0':
             if int(mm) in (1,2,4,6,8,9,11):
                 dd = '31'
@@ -51,7 +52,7 @@ def make_template(variant=0):
                 dd = '28'
                 mm = '02'
     elif variant == 2:
-        dd = str(datetime.now().day+1)
+        dd = str(datetime_now.day+1)
         if dd == '32':
             dd = '01'
             mm = str(int(mm) + 1)

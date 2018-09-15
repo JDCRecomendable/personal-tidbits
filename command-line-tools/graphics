@@ -23,15 +23,15 @@ def run(flag=0):
         print('Exiting...')
     if flag == 1:
         start_message = 'Attempting to switch to {} Graphics Card.'
-        start_command = 'x-terminal-emulator -e "sudo prime-select {}"'
+        start_command = 'x-terminal-emulator -e "echo FROM {} TO {} && sudo prime-select {}"'
         end_message1 = 'The switch will be carried out in a new terminal window.'
         end_message2 = 'After the switch, please restart your system for the changes to take effect.'
         if result == 'intel':
             print(start_message.format('NVIDIA (Dedicated)'))
-            to_run = start_command.format('nvidia')
+            to_run = start_command.format('intel', 'nvidia', 'nvidia')
         elif result == 'nvidia':
             print(start_message.format('Intel (Integrated)'))
-            to_run = start_command.format('intel')
+            to_run = start_command.format('nvidia', 'intel', 'intel')
         print()
         print(end_message1)
         print(end_message2)

@@ -3,6 +3,7 @@ I open-source my own quirkiness here—random tools that make my life a little b
 
 ## Tidbits
 * cdl
+* graphics
 * launch
 * mkdird
 
@@ -11,6 +12,6 @@ I open-source my own quirkiness here—random tools that make my life a little b
 * Python 3
 
 ## Installation
-1. Place the the tidbits into a bin directory, that your system recognises such as `~/.local/bin/` in Debian.
+1. Place the the tidbits into a bin directory, that your system recognises such as `~/.local/bin/` in Ubuntu or `~/bin/` in Debian.
 2. Set the necessary permissions required to run the commandline tidbits.  
 ```chmod 755 name-of-binary```

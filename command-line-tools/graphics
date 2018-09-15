@@ -1,0 +1,60 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
+
+import sys
+import subprocess
+
+def run(flag=0):
+    '''Carry out the process of switching graphics card. If NVIDIA is being
+    used, the graphics card is switched to Intel, and vice versa.'''
+    result = str(subprocess.check_output(['prime-select', 'query']))
+    if 'intel' in result:
+        result = 'intel'
+        print('Currently Active Graphics Card: Intel (Integrated)')
+    elif 'nvidia' in result:
+        result = 'nvidia'
+        print('Currently Active Graphics Card: NVIDIA (Dedicated)')
+    else:
+        flag = 0
+        print('Failed to get information on the currently active graphics card.')
+        print('Exiting...')
+    if flag == 1:
+        start_message = 'Attempting to switch to {} Graphics Card.'
+        start_command = 'x-terminal-emulator -e "sudo prime-select {}"'
+        end_message1 = 'The switch will be carried out in a new terminal window.'
+        end_message2 = 'After the switch, please restart your system for the changes to take effect.'
+        if result == 'intel':
+            print(start_message.format('NVIDIA (Dedicated)'))
+            to_run = start_command.format('nvidia')
+        elif result == 'nvidia':
+            print(start_message.format('Intel (Integrated)'))
+            to_run = start_command.format('intel')
+        print()
+        print(end_message1)
+        print(end_message2)
+        print()
+        subprocess.run(['bash', '-c', to_run])
+
+def show_help():
+    '''Show the help documentation for the program.'''
+    help_doc = '''Usage: graphics [options]
+
+Options:
+  -h, --help    show this help message and exit
+  -s, --switch  switch to the currently inactive graphics card
+  -v, --view    get the currently active graphics card'''
+    print(help_doc)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        if sys.argv[1] in ('-s', '--switch'):
+            run(1)
+        elif sys.argv[1] in ('-v', '--view'):
+            run()
+        else:
+            show_help()
+    else:
+        show_help()

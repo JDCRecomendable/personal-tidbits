@@ -16,7 +16,7 @@ def run(flag):
         2 : 'nautilus ~/Apps/',
         3 : 'nautilus ~/Dropbox/',
         4 : 'nautilus ~/.local/bin/',
-        5 : 'cd ~ && sudo ./Apps/arduino-1.8.5/arduino',
+        5 : 'x-terminal-emulator -e "cd ~ && sudo ./Apps/arduino-1.8.5/arduino"',
         6 : 'cd ~ && ./Apps/eagle-9.1.0/eagle',
         7 : 'cd ~ && ./Apps/etcher-electron-1.4.4-x86_64/etcher-electron-1.4.4-x86_64.AppImage',
         8 : 'cd ~ && ./Apps/fritzing-0.9.3b.linux.AMD64/Fritzing',
@@ -24,10 +24,10 @@ def run(flag):
         10: 'cd ~/Apps/tor-browser_en-US/ && ./start-tor-browser.desktop',
         11: 'cd ~ && ./Apps/coursemology-linux-x64/coursemology',
         12: 'thunderbird',
-        13: 'jupyter-notebook --no-browser',
+        13: 'x-terminal-emulator -e "jupyter-notebook --no-browser"',
         14: 'cd ~ && ./Apps/freemind-bin-1.0.1/freemind.sh',
         15: 'cd ~ && ./Apps/whats-app-web-linux-x64/whats-app-web',
-        16: 'sudo mu-editor',
+        16: 'x-terminal-emulator -e "sudo mu-editor"',
         17: 'anki',
         18: 'nautilus ~/Music/'
     }

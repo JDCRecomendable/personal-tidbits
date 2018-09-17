@@ -28,7 +28,6 @@ fi
 
 echo ""
 echo ""
-echo ""
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo "++++                                                                                                                     ++++"
@@ -78,6 +77,7 @@ echo "++  Create a new directory.                                       ++  mkdi
 echo "++  Delete a file.                                                ++  rm (file name)                                       ++"
 echo "++  Delete a directory.                                           ++  rmdir (directory name)                               ++"
 echo "++  Delete a directory and its contents.                          ++  rm -R (directory name)                               ++"
+echo "++  Retrieve files over a network.                                ++  wget (URL)                                           ++"
 echo "++                                                                ++                                                       ++"
 echo "++  Check the current time and date.                              ++  date                                                 ++"
 echo "++  Browse the web.                                               ++  elinks                                               ++"

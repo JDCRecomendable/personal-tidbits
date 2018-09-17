@@ -1,5 +1,5 @@
 # Command Line Tools
-I open-source my own quirkiness here—random tools that make my life a little bit easier.
+I open-source my command line utilities and tools here—random tools that make my life a little bit easier.
 
 ## Tidbits
 * cdl

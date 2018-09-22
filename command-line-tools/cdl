@@ -44,30 +44,24 @@ def auto_nav(string, count):
 def prep_str(flag, nav_flag=-1):
     '''Prepare the string to pass into the bash shell later to open the
     appropriate directory in Nautilus.'''
-    # Administrative Activiteis
+    # Administrative Activities
     string = '/home/{}/Dropbox/'.format(get_username())
     os.chdir(string)
 
-    # Deal with HOME Contents
-    if flag == 0:
-        string += 'HOME/'
-        string = auto_nav(string, 3)
-
-    # Deal with YIJC
-    elif flag == 1:
-        string += 'YIJC/'
-
-    # Deal with Projects
-    elif flag == 3:
-        string += 'Projects/'
-        string = auto_nav(string, 3)
-
-    # Deal with Media
-    elif flag == 4:
-        string += 'Media/'
+    # Deal with General Contents
+    if flag != 2:
+        category_directory = {
+            0: 'HOME/',
+            1: 'YIJC/',
+            3: 'Projects/',
+            4: 'Media/'
+        }
+        string += category_directory[flag]
+        if flag in (0, 3):
+            string = auto_nav(string, 3)
 
     # Deal with YIJC 2018 Contents
-    elif flag == 2:
+    else:
         string += 'YIJC/2018/'
         subject_directory = {
             0: '0ADMIN/',
@@ -81,31 +75,23 @@ def prep_str(flag, nav_flag=-1):
         if nav_flag == 2:
             string += '2PW/'
         else:
-            try:
-                string += subject_directory[nav_flag]
-                string = auto_nav(string, 3)
-            except KeyError:
-                return 1, 'ERROR'
-    else:
-        return 1, 'ERROR'
+            string += subject_directory[nav_flag]
+            string = auto_nav(string, 3)
 
     # Assist Bash in recognising special symbols
     symbol_fix = (' ', "'", '"', '(', '[', '{', '<', ')', ']', '}', '>', '&')
     for symbol in symbol_fix:
         string = assist_bash(string, symbol)
 
-    return 0, string
+    return string
 
 def run(flag, nav_flag=-1):
     '''Carry out the process of navigating to the latest directory based on
     user's entered arguments. This is the first function called when the program
     is run in the terminal.'''
     result = prep_str(flag, nav_flag)
-    if result[0] == 0:
-        to_run = 'nautilus {}'.format(result[1])
-        subprocess.run(['bash', '-c', to_run])
-    else:
-        show_help()
+    to_run = 'nautilus {}'.format(result)
+    subprocess.run(['bash', '-c', to_run])
 
 def show_help():
     '''Show the help documentation for the program.'''
@@ -143,8 +129,9 @@ if __name__ == '__main__':
             '--media'   : 4
         }
         try:
-            run(options[sys.argv[1]])
-        except KeyError:
+            run_flag = options[sys.argv[1]]
+            run(run_flag)
+        except:
             show_help()
     elif len(sys.argv) == 3:
         if sys.argv[1] in ('-n', '--nav'):
@@ -159,8 +146,9 @@ if __name__ == '__main__':
                 '18cca'  : 7
             }
             try:
-                run(2, nav_options[sys.argv[2]])
-            except KeyError:
+                run_nav_flag = nav_options[sys.argv[2]]
+                run(2, run_nav_flag)
+            except:
                 show_help()
         else:
             show_help()

@@ -56,7 +56,7 @@ echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 echo "++  Connect to the Internet.                                      ++  nmtui                                                ++"
 echo "++  Log on to the Gnome graphical shell.                          ++  startx                                               ++"
 echo "++  Quit the graphical shell and return here.                     ++  (Simply log out from the graphical shell.)           ++"
-echo "++  Reboot this computer.                                         ++  shutdown -r now                                      ++"
+echo "++  Reboot this computer.                                         ++  reboot                                               ++"
 echo "++  Switch off this computer.                                     ++  shutdown now                                         ++"
 echo "++  Quit this shell.                                              ++  exit                                                 ++"
 echo "++                                                                ++                                                       ++"

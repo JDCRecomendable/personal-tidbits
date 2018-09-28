@@ -11,6 +11,8 @@ I open-source my own tools here—random automation tools that make my life a li
     * locale.conf
     * locale.gen
     * profile
+  * /usr/bin/
+    * dropbox
 * Ubuntu
   * ~/.local/bin/
     * cdl

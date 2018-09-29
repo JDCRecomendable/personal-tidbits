@@ -13,6 +13,7 @@ I open-source my own tools here—random automation tools that make my life a li
     * profile
   * /usr/bin/
     * dropbox
+    * mkdird
 * Ubuntu
   * ~/.local/bin/
     * cdl

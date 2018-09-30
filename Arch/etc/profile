@@ -72,6 +72,8 @@ echo "++  Switch off this computer.                                     ++  shut
 echo "++  Quit this shell.                                              ++  exit                                                 ++"
 echo "++                                                                ++                                                       ++"
 echo "++  Update the software in this computer.                         ++  pacman -Syu                                          ++"
+echo "++  Install a new software package.                               ++  pacman -S (package name)                             ++"
+echo "++  Purge an installed software package.                          ++  pacman -Rns (package name)                           ++"
 echo "++                                                                ++                                                       ++"
 echo "++  Check the current time and date.                              ++  date                                                 ++"
 echo "++  Browse the local files and directories.                       ++  ranger                                               ++"

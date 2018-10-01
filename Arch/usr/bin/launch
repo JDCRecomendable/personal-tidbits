@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
+
+import sys
+import subprocess
+
+def run(flag):
+    '''Carry out the process of launching the requested application. This is the
+    first function called when the program is run in the terminal.'''
+    insertion = {
+        0 : 'chromium --incognito',
+        1 : 'pcmanfm /home/jdcrecomendable/Dropbox',
+        2 : 'firefox --private-window',
+        3 : 'thunderbird'
+    }
+    try:
+        to_run = insertion[flag]
+        subprocess.run(['bash', '-c', to_run])
+    except KeyError:
+        show_help()
+
+def show_help():
+    '''Show the help documentation for the program.'''
+    help_doc = '''Usage: launch [options]
+
+Options:
+  chromium  launch Chromium in incognito mode
+  dropbox   launch PCManFM with ~/Dropbox open
+  firefox   launch Firefox in a Private Window
+  mail      launch Thunderbird'''
+    print(help_doc)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        options = {
+            'chrome'      :  0,
+            'chromium'    :  0,
+            'dropbox'     :  1,
+            'firefox'     :  2,
+            'mail'        :  3
+        }
+        try:
+            run(options[sys.argv[1]])
+        except KeyError:
+            show_help()
+    else:
+        show_help()

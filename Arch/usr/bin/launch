@@ -14,7 +14,8 @@ def run(flag):
         0 : 'chromium --incognito',
         1 : 'pcmanfm /home/jdcrecomendable/Dropbox',
         2 : 'firefox --private-window',
-        3 : 'thunderbird'
+        3 : 'thunderbird',
+        4 : 'redshift-gtk'
     }
     try:
         to_run = insertion[flag]
@@ -30,7 +31,8 @@ Options:
   chromium  launch Chromium in incognito mode
   dropbox   launch PCManFM with ~/Dropbox open
   firefox   launch Firefox in a Private Window
-  mail      launch Thunderbird'''
+  mail      launch Thunderbird
+  redshift  launch Redshift-GTK'''
     print(help_doc)
 
 if __name__ == '__main__':
@@ -40,7 +42,8 @@ if __name__ == '__main__':
             'chromium'    :  0,
             'dropbox'     :  1,
             'firefox'     :  2,
-            'mail'        :  3
+            'mail'        :  3,
+            'redshift'    :  4
         }
         try:
             run(options[sys.argv[1]])

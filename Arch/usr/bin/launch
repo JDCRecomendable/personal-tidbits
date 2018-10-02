@@ -33,7 +33,7 @@ Options:
   dropbox   launch PCManFM with ~/Dropbox open
   firefox   launch Firefox in a Private Window
   mail      launch Thunderbird
-  redshift  launch Redshift-GTK
+  redshift  launch Redshift
   tor       launch Tor Browser'''
     print(help_doc)
 

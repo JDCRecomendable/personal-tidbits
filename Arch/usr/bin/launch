@@ -15,7 +15,8 @@ def run(flag):
         1 : 'pcmanfm /home/jdcrecomendable/Dropbox',
         2 : 'firefox --private-window',
         3 : 'thunderbird',
-        4 : 'redshift-gtk'
+        4 : 'redshift-gtk',
+        5 : 'cd /home/jdcrecomendable/bin/tor-browser_en-US && ./start-tor-browser.desktop'
     }
     try:
         to_run = insertion[flag]
@@ -32,7 +33,8 @@ Options:
   dropbox   launch PCManFM with ~/Dropbox open
   firefox   launch Firefox in a Private Window
   mail      launch Thunderbird
-  redshift  launch Redshift-GTK'''
+  redshift  launch Redshift-GTK
+  tor       launch Tor Browser'''
     print(help_doc)
 
 if __name__ == '__main__':
@@ -43,7 +45,8 @@ if __name__ == '__main__':
             'dropbox'     :  1,
             'firefox'     :  2,
             'mail'        :  3,
-            'redshift'    :  4
+            'redshift'    :  4,
+            'tor'         :  5
         }
         try:
             run(options[sys.argv[1]])

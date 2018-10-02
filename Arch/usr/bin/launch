@@ -15,7 +15,7 @@ def run(flag):
         1 : 'pcmanfm /home/jdcrecomendable/Dropbox',
         2 : 'firefox --private-window',
         3 : 'thunderbird',
-        4 : 'redshift-gtk',
+        4 : 'redshift',
         5 : 'cd /home/jdcrecomendable/bin/tor-browser_en-US && ./start-tor-browser.desktop'
     }
     try:

@@ -161,7 +161,7 @@ Plugin {
 Plugin {
   type=space
   Config {
-    Size=12
+    Size=20
   }
 }
 Plugin {
@@ -172,7 +172,7 @@ Plugin {
 Plugin {
   type=space
   Config {
-    Size=12
+    Size=16
   }
 }
 Plugin {
@@ -188,7 +188,7 @@ Plugin {
 Plugin {
   type=space
   Config {
-    Size=8
+    Size=12
   }
   expand=0
 }

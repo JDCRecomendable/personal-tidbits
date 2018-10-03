@@ -1,5 +1,5 @@
 # Personal Tidbits
-I open-source my own tools here—random automation tools that make my life a little bit easier.
+Tools and config scripts here aim to facilitate increased productivity as well as quick and easy transfer of preferences between computers respectively.
 
 ## Tidbits
 * Arch
@@ -13,14 +13,9 @@ I open-source my own tools here—random automation tools that make my life a li
     * profile
   * /home/user/
     * .config/
-      * lxpanel/LXDE/panels/
-        * left
-        * panel
-      * lxsession/LXDE/
-        * autostart
-        * desktop.conf
-      * openbox/
-        * lxde-rc.xml
+      * (lxpanel config files)
+      * (lxsession config files)
+      * (openbox config files)
       * redshift.conf
     * Templates/
       * (template files)

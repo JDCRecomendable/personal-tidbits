@@ -1,0 +1,3 @@
+This file uses Windows line endings (Carriage Return and Line Feed '\r\n') instead of UNIX line endings (Line Feed only '\n').
+
+Press [Ctrl] + [A] to select all text and [Backspace] or [Del] to clear the selected text in this file.

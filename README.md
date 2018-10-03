@@ -11,16 +11,19 @@ I open-source my own tools here—random automation tools that make my life a li
     * locale.conf
     * locale.gen
     * profile
-  * /home/user/.config/
-    * lxpanel/LXDE/panels/
-      * left
-      * panel
-    * lxsession/LXDE/
-      * autostart
-      * desktop.conf
-    * openbox/
-      * lxde-rc.xml
-    * redshift.conf
+  * /home/user/
+    * .config/
+      * lxpanel/LXDE/panels/
+        * left
+        * panel
+      * lxsession/LXDE/
+        * autostart
+        * desktop.conf
+      * openbox/
+        * lxde-rc.xml
+      * redshift.conf
+    * Templates/
+      * (template files)
   * /usr/bin/
     * brightness
     * cdl
@@ -38,3 +41,5 @@ I open-source my own tools here—random automation tools that make my life a li
       * graphics
       * launch
       * mkdird
+    * Templates/
+      * (template files)

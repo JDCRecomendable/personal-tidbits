@@ -12,6 +12,7 @@ I open-source my own tools here—random automation tools that make my life a li
     * locale.gen
     * profile
   * /usr/bin/
+    * brightness
     * cdl
     * dropbox
     * launch

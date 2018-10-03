@@ -20,6 +20,7 @@ I open-source my own tools here—random automation tools that make my life a li
       * desktop.conf
     * openbox/
       * lxde-rc.xml
+    * redshift.conf
   * /usr/bin/
     * brightness
     * cdl
@@ -29,8 +30,11 @@ I open-source my own tools here—random automation tools that make my life a li
 * Ubuntu
   * /etc/
     * profile
-  * /home/user/.local/bin/
-    * cdl
-    * graphics
-    * launch
-    * mkdird
+  * /home/user/
+    * .config/
+      * redshift.conf
+    * .local/bin/
+      * cdl
+      * graphics
+      * launch
+      * mkdird

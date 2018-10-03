@@ -76,6 +76,8 @@ echo "++  Install a new software package.                               ++  pacm
 echo "++  Purge an installed software package.                          ++  pacman -Rns (package name)                           ++"
 echo "++                                                                ++                                                       ++"
 echo "++  Check the current time and date.                              ++  date                                                 ++"
+echo "++  Start the Dropbox daemon.                                     ++  dropbox start                                        ++"
+echo "++  Stop  the Dropbox daemon.                                     ++  dropbox stop                                         ++"
 echo "++  Browse the local files and directories.                       ++  ranger                                               ++"
 echo "++  Browse the web.                                               ++  elinks                                               ++"
 echo "++  Launch the calculator.                                        ++  bc                                                   ++"

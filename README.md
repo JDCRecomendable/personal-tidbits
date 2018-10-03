@@ -11,6 +11,15 @@ I open-source my own tools here—random automation tools that make my life a li
     * locale.conf
     * locale.gen
     * profile
+  * /home/user/.config/
+    * lxpanel/LXDE/panels/
+      * left
+      * panel
+    * lxsession/LXDE/
+      * autostart
+      * desktop.conf
+    * openbox/
+      * lxde-rc.xml
   * /usr/bin/
     * brightness
     * cdl
@@ -18,10 +27,10 @@ I open-source my own tools here—random automation tools that make my life a li
     * launch
     * mkdird
 * Ubuntu
-  * ~/.local/bin/
+  * /etc/
+    * profile
+  * /home/user/.local/bin/
     * cdl
     * graphics
     * launch
     * mkdird
-  * /etc/
-    * profile

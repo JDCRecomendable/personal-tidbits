@@ -17,7 +17,9 @@ def run(flag):
         3 : 'thunderbird',
         4 : 'redshift',
         5 : 'cd /home/jdcrecomendable/bin/tor-browser_en-US && ./start-tor-browser.desktop',
-        6 : 'remarkable'
+        6 : 'cd /home/jdcrecomendable/bin/arduino-1.8.7 && ./arduino',
+        7 : 'cd /home/jdcrecomendable/bin/fritzing-0.9.3b.linux.AMD64 && ./Fritzing',
+        8 : '"/home/jdcrecomendable/bin/android-studio/bin/studio.sh" %f'
     }
     try:
         to_run = insertion[flag]
@@ -30,26 +32,30 @@ def show_help():
     help_doc = '''Usage: launch [options]
 
 Options:
-  chromium    launch Chromium in incognito mode
-  dropbox     launch PCManFM with ~/Dropbox open
-  firefox     launch Firefox in a Private Window
-  mail        launch Thunderbird
-  redshift    launch Redshift
-  remarkable  launch Remarkable (README Editor)
-  tor         launch Tor Browser'''
+  android-studio  launch Android Studio
+  arduino         launch Arduino IDE
+  chromium        launch Chromium in incognito mode
+  dropbox         launch PCManFM with ~/Dropbox open
+  firefox         launch Firefox in a Private Window
+  fritzing        launch Fritzing
+  mail            launch Thunderbird
+  redshift        launch Redshift
+  tor             launch Tor Browser'''
     print(help_doc)
 
 if __name__ == '__main__':
     if len(sys.argv) == 2:
         options = {
-            'chrome'      :  0,
-            'chromium'    :  0,
-            'dropbox'     :  1,
-            'firefox'     :  2,
-            'mail'        :  3,
-            'redshift'    :  4,
-            'tor'         :  5,
-            'remarkable'  :  6
+            'chrome'          :  0,
+            'chromium'        :  0,
+            'dropbox'         :  1,
+            'firefox'         :  2,
+            'mail'            :  3,
+            'redshift'        :  4,
+            'tor'             :  5,
+            'arduino'         :  6,
+            'fritzing'        :  7,
+            'android-studio'  :  8
         }
         try:
             run(options[sys.argv[1]])

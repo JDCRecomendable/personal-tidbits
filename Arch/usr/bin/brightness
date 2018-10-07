@@ -4,6 +4,9 @@
 
 # Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
 
+# Use visudo to exclude this utility from requiring user/root passwords when
+# running with sudo.
+
 import sys
 import subprocess
 

@@ -1,0 +1,50 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
+
+import sys
+import subprocess
+
+com_get_id = 'xinput list | grep SynPS/2'
+com_get_status = 'xinput list-props {} | grep "Device Enabled"'
+com_toggle = 'xinput set-prop {} "Device Enabled" {}'
+cannot_get_status = '\nUnable to get active status of touchpad.\nExiting...\n'
+
+def run():
+    """Carry out the process of toggling whether the touchpad is active."""
+    touchpad_id = str(subprocess.check_output(com_get_id, shell=True))
+    index = touchpad_id.find('id=') + 3
+    index_end = 5
+    while index_end > 0:
+        if touchpad_id[index:index + index_end].isnumeric():
+            touchpad_id = int(touchpad_id[index:index + index_end])
+            break
+        index_end -= 1
+    if index_end == 0 or type(touchpad_id) != type(0):
+        sys.exit(cannot_get_status)
+    touchpad_status = str(
+        subprocess.check_output(
+            com_get_status.format(touchpad_id), shell=True
+        )
+    )
+    touchpad_status = touchpad_status.split(':')[1]
+    if '1' in touchpad_status:
+        to_set = 0
+    else:
+        to_set = 1
+    to_run = com_toggle.format(touchpad_id, to_set)
+    subprocess.run(['bash', '-c', to_run])
+
+def show_help():
+    """Show the help documentation for the program."""
+    help_doc = '''Usage: toggle-touchpad
+Simply toggles the touchpad on or off.'''
+    print(help_doc)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        run()
+    else:
+        show_help()

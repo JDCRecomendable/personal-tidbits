@@ -7,21 +7,40 @@
 import sys
 import subprocess
 
+errormsg = '\nUnable to get volume.\nExiting...\n'
 invalid_resp = '\nYou have entered an invalid response.\nExiting...\n'
 com = 'pactl set-sink-mute 0 0 && pactl set-sink-volume 0 {}%'
+comget = 'pactl list sinks | grep Volume'
 
 def run(has_input, level=0):
     """Carry out the process of changing the volume of the system."""
-    if has_input:
+    if has_input == 1:
         to_run = com.format(level)
+        print(level)
         subprocess.run(['bash', '-c', to_run])
+    elif has_input == 2:
+        volume = str(
+            subprocess.check_output([comget], shell=True)
+        ).split('Base Volume')[0]
+        volume = volume.split('/ ')[1]
+        volume = volume.split('%')[0]
+        volume = volume.split(' ')[-1]
+        if volume.isnumeric():
+            volume = int(volume)
+            if level == 'u':
+                volume = min(100, volume + 5)
+            else:
+                volume = max(0, volume - 5)
+            run(1, volume)
+        else:
+            sys.exit(errormsg)
     else:
         temp_level = input('Volume [0-100, Default: 0]: ')
         if temp_level == '':
-            run(True)
+            run(1)
         elif temp_level.isnumeric():
             if 0 <= int(temp_level) < 101:
-                run(True, temp_level)
+                run(1, temp_level)
             else:
                 sys.exit(invalid_resp)
         else:
@@ -43,9 +62,11 @@ if __name__ == '__main__':
         if sys.argv[1].isnumeric():
             vol = int(sys.argv[1])
             if 0 <= vol < 101:
-                run(True, vol)
+                run(1, vol)
             else:
                 show_help()
+        elif sys.argv[1] in ('d', 'u', 'down', 'up'):
+            run(2, sys.argv[1][0])
         else:
             show_help()
     else:

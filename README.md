@@ -27,3 +27,4 @@ Tools and config scripts here aim to facilitate increased productivity as well a
       * launch
       * mkdird
       * volume
+      * volume-bluetooth

@@ -15,6 +15,7 @@ Tools and config scripts here aim to facilitate increased productivity as well a
     * mkdird
     * toggle-touchpad
     * volume
+    * volume-bluetooth
 * Ubuntu
   * /etc/
     * profile
@@ -27,4 +28,3 @@ Tools and config scripts here aim to facilitate increased productivity as well a
       * launch
       * mkdird
       * volume
-      * volume-bluetooth

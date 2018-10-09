@@ -20,9 +20,8 @@ def run(has_input, level=0):
         subprocess.run(['bash', '-c', to_run])
     elif has_input == 2:
         volume = str(
-            subprocess.check_output([comget], shell=True)
-        ).split('Base Volume')[0]
-        volume = volume.split('/ ')[1]
+            subprocess.check_output(comget, shell=True)
+        ).split('/ ')[1]
         volume = volume.split('%')[0]
         volume = volume.split(' ')[-1]
         if volume.isnumeric():

@@ -7,6 +7,8 @@ Tools and config scripts here aim to facilitate increased productivity as well a
     * profile
   * /home/user/
     * .config/
+      * i3/
+        * config
       * redshift.conf
   * /usr/bin/
     * brightness
@@ -27,4 +29,3 @@ Tools and config scripts here aim to facilitate increased productivity as well a
       * graphics
       * launch
       * mkdird
-      * volume

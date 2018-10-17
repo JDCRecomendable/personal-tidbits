@@ -21,7 +21,8 @@ def run(flag):
         7 : 'cd /home/jdcrecomendable/bin/fritzing-0.9.3b.linux.AMD64 && ./Fritzing',
         8 : '"/home/jdcrecomendable/bin/android-studio/bin/studio.sh" %f',
         9 : '"/home/jdcrecomendable/Qt/Tools/Preview/Qt Creator 4.7.0-rc1/bin/qtcreator"',
-        10: 'cd /home/jdcrecomendable/bin/etcher-electron-1.4.5-x86_64 && ./etcher-electron-1.4.5-x86_64.AppImage'
+        10: 'cd /home/jdcrecomendable/bin/etcher-electron-1.4.5-x86_64 && ./etcher-electron-1.4.5-x86_64.AppImage',
+        11: 'cd /home/jdcrecomendable/bin/SynfigStudio-1.2.2-18.09.14-linux64-286f1 && ./SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage'
     }
     try:
         to_run = insertion[flag]
@@ -44,6 +45,7 @@ Options:
   mail            launch Thunderbird
   qt-creator      launch Qt Creator
   redshift        launch Redshift
+  synfig          launch Synfig Studio
   tor             launch Tor Browser'''
     print(help_doc)
 
@@ -61,7 +63,8 @@ if __name__ == '__main__':
             'fritzing'        :  7,
             'android-studio'  :  8,
             'qt-creator'      :  9,
-            'etcher'          : 10
+            'etcher'          : 10,
+            'synfig'          : 11
         }
         try:
             run(options[sys.argv[1]])

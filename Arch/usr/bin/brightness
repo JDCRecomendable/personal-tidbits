@@ -11,36 +11,29 @@ import sys
 import subprocess
 
 readcom = 'cat'
-com = 'tee /sys/class/backlight/acpi_video0/brightness <<< {}'
-com2 = '/sys/class/backlight/acpi_video0/brightness'
+com = 'tee /sys/class/backlight/intel_backlight/brightness <<< {}'
+com2 = '/sys/class/backlight/intel_backlight/brightness'
 invalid_resp = '\nYou have entered an invalid response.\nExiting...\n'
 cannot_get_brightness = '\nUnable to get brightness.\nExiting...\n'
 
-def run(has_input, level=7):
+def run(has_input, level=7500):
     """Carry out the process of changing the brightness of the display."""
     if has_input == 1:
         to_run = com.format(level)
         subprocess.run(['bash', '-c', to_run])
     elif has_input == 2:
-        current_brightness = str(subprocess.check_output([readcom, com2]))
-        for char in current_brightness:
-            if char.isnumeric():
-                current_brightness = int(char)
-                break
-        if type(current_brightness) == type(0):
-            if level == 'd':
-                level = max(current_brightness - 1, 0)
-            else:
-                level = min(current_brightness + 1, 7)
-            run(1, level)
+        current_brightness = int(subprocess.check_output('cat /sys/class/backlight/intel_backlight/brightness', shell=True).decode().split('\n')[0])
+        if level == 'd':
+            level = max(current_brightness - 50, 0)
         else:
-            sys.exit(cannot_get_brightness)
+            level = min(current_brightness + 50, 7500)
+        run(1, level)
     else:
-        temp_level = input('Brightness Level [0-7, Default: 7]: ')
+        temp_level = input('Brightness Level [0-7500, Default: 7500]: ')
         if temp_level == '':
             run(1)
         elif temp_level.isnumeric():
-            if 0 <= int(temp_level) < 8:
+            if 0 <= int(temp_level) <= 7500:
                 run(1, temp_level)
             else:
                 sys.exit(invalid_resp)
@@ -52,14 +45,9 @@ def show_help():
     help_doc = '''Usage: brightness [level/change]
 
 Level:
-  0 - lowest
-  1
-  2
-  3
-  4
-  5
-  6
-  7 - highest
+  0    - lowest
+  [...]
+  7500 - highest
 
 Change:
   u/up   - Increases the screen brightness by one level.
@@ -70,9 +58,12 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
         run(0)
     elif len(sys.argv) == 2:
-        if sys.argv[1] in ('0','1','2','3','4','5','6','7'):
-            level = sys.argv[1]
-            run(1, level)
+        if sys.argv[1].isnumeric():
+            if 0 <= int(sys.argv[1]) <= 7500:
+                level = sys.argv[1]
+                run(1, level)
+            else:
+                show_help()
         elif sys.argv[1] in ('d', 'u', 'down', 'up'):
             level = sys.argv[1][0]
             run(2, level)

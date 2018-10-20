@@ -22,7 +22,8 @@ def run(flag):
         8 : '"/home/jdcrecomendable/bin/android-studio/bin/studio.sh" %f',
         9 : '"/home/jdcrecomendable/Qt/Tools/Preview/Qt Creator 4.7.0-rc1/bin/qtcreator"',
         10: 'cd /home/jdcrecomendable/bin/etcher-electron-1.4.5-x86_64 && ./etcher-electron-1.4.5-x86_64.AppImage',
-        11: 'cd /home/jdcrecomendable/bin/SynfigStudio-1.2.2-18.09.14-linux64-286f1 && ./SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage'
+        11: 'cd /home/jdcrecomendable/bin/SynfigStudio-1.2.2-18.09.14-linux64-286f1 && ./SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage',
+        12: 'cd /home/jdcrecomendable/bin/eagle-9.2.0 && ./run'
     }
     try:
         to_run = insertion[flag]
@@ -39,6 +40,7 @@ Options:
   arduino         launch Arduino IDE
   chromium        launch Chromium in incognito mode
   dropbox         launch PCManFM with ~/Dropbox open
+  eagle           launch Autodesk Eagle
   etcher          launch Etcher
   firefox         launch Firefox in a Private Window
   fritzing        launch Fritzing
@@ -64,7 +66,8 @@ if __name__ == '__main__':
             'android-studio'  :  8,
             'qt-creator'      :  9,
             'etcher'          : 10,
-            'synfig'          : 11
+            'synfig'          : 11,
+            'eagle'           : 12
         }
         try:
             run(options[sys.argv[1]])

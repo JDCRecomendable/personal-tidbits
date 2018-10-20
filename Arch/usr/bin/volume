@@ -27,9 +27,9 @@ def run(has_input, level=0):
         if volume.isnumeric():
             volume = int(volume)
             if level == 'u':
-                volume = min(100, volume + 5)
+                volume = min(100, volume + 1)
             else:
-                volume = max(0, volume - 5)
+                volume = max(0, volume - 1)
             run(1, volume)
         else:
             sys.exit(errormsg)

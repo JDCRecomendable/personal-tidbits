@@ -7,16 +7,19 @@
 import sys
 import subprocess
 
+# Need to change these when porting this program for other sinks or computers.
+sink = 1
+
+# Default Commands and Error Messages
 errormsg = '\nUnable to get volume.\nExiting...\n'
 invalid_resp = '\nYou have entered an invalid response.\nExiting...\n'
-com = 'pactl set-sink-mute 1 0 && pactl set-sink-volume 1 {}%'
+com = 'pactl set-sink-mute {s} 0 && pactl set-sink-volume {s} {p}%'
 comget = 'pactl list sinks | grep Volume'
 
 def run(has_input, level=0):
-    """Carry out the process of changing the volume of the Bluetooth audio
-    device connected to the system."""
+    """Carry out the process of changing the volume of the system."""
     if has_input == 1:
-        to_run = com.format(level)
+        to_run = com.format(s=sink, p=level)
         print(level)
         subprocess.run(['bash', '-c', to_run])
     elif has_input == 2:

@@ -202,7 +202,7 @@ bindsym $mod+Mod1+Home exec "pcmanfm"
 bindsym Mod1+F2 exec dmenu_run
 
 # start-up commands
-exec redshift
+exec redshift-gtk
 exec dropbox start
 exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T.png
 exec --no-startup-id xscreensaver -no-splash

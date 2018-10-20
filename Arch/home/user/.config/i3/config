@@ -38,6 +38,7 @@ bindsym Control+Mod1+T exec "lxterminal"
 bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 bindsym Mod1+F4 kill
+bindsym --release button2 kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -177,29 +178,39 @@ bar {
         separator_symbol "|"
 }
 
-# user key bindings
-bindsym $mod+l exec "xscreensaver-command -lock"
-bindsym $mod+Mod1+Left exec "sudo bri d"
-bindsym $mod+Mod1+Right exec "sudo bri u"
+# user-specified laptop-key specific key bindings
 bindsym XF86MonBrightnessDown exec "sudo bri d"
 bindsym XF86MonBrightnessUp exec "sudo bri u"
-bindsym $mod+Mod1+Up exec "vol u"
-bindsym $mod+Mod1+Down exec "vol d"
-bindsym XF86Display exec "lxrandr"
-bindsym $mod+p exec "lxrandr"
-bindsym $mod+F4 exec "shutdown now"
-bindsym $mod+F5 exec "shutdown -r now"
-bindsym XF86ScreenSaver exec "xscreensaver-command -lock"
-bindsym $mod+Mod1+F9 exec "toggle-touchpad"
-bindsym Print exec "gnome-screenshot"
-bindsym $mod+X exec "gnome-screenshot -i"
-bindsym $mod+Z exec "leafpad"
-bindsym $mod+T exec i3-sensible-terminal
-bindsym Control+Mod1+T exec i3-sensible-terminal
+bindsym XF86AudioRaiseVolume exec "vol u"
+bindsym XF86AudioLowerVolume exec "vol d"
+
+# user-specified application launching key bindings
+bindsym $mod+z exec "leafpad"
 bindsym $mod+Home exec "firefox --private-window"
 bindsym $mod+Shift+Home exec "chromium --incognito"
 bindsym $mod+Mod1+Home exec "pcmanfm"
+bindsym $mod+m exec "thunderbird"
+
+# user-specified administrative key bindings
+bindsym $mod+l exec "xscreensaver-command -lock"
+bindsym $mod+p exec "lxrandr"
+bindsym $mod+F4 exec "shutdown now"
+bindsym $mod+F5 exec "shutdown -r now"
+bindsym Print exec "gnome-screenshot"
+bindsym $mod+x exec "gnome-screenshot -i"
 bindsym Mod1+F2 exec dmenu_run
+
+# user-specified directory-opening key bindings
+bindsym $mod+Mod1+d exec "launch dropbox"
+bindsym $mod+Mod1+h exec "cdl -H"
+bindsym $mod+Mod1+m exec "cdl -M"
+bindsym $mod+Mod1+p exec "cdl -P"
+bindsym $mod+Mod1+y exec "cdl -Y"
+bindsym $mod+Mod1+Shift+b exec "pcmanfm /home/jdcrecomendable/bin"
+bindsym $mod+Mod1+Shift+d exec "pcmanfm /home/jdcrecomendable/Documents"
+bindsym $mod+Mod1+Shift+p exec "pcmanfm /home/jdcrecomendable/Pictures"
+bindsym $mod+Mod1+Shift+m exec "pcmanfm /home/jdcrecomendable/Music"
+bindsym $mod+Mod1+Shift+v exec "pcmanfm /home/jdcrecomendable/Videos"
 
 # start-up commands
 exec redshift-gtk
@@ -208,8 +219,14 @@ exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD
 exec --no-startup-id xscreensaver -no-splash
 gaps inner 40
 
+# set up scratchpad
+for_window [title="__scratchpad"] move scratchpad
+exec --no-startup-id lxterminal -t "__scratchpad"
+bindsym $mod+Control+space move scratchpad
+bindsym $mod+Mod1+space scratchpad show
+
 # setting gaps between windows
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 4
 hide_edge_borders both
 set $mode_gaps Gaps: [o]uter, [i]nner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)

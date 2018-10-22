@@ -23,7 +23,8 @@ def run(flag):
         9 : '"/home/jdcrecomendable/Qt/Tools/QtCreator/bin/qtcreator"',
         10: 'cd /home/jdcrecomendable/bin/etcher-electron-1.4.5-x86_64 && ./etcher-electron-1.4.5-x86_64.AppImage',
         11: 'cd /home/jdcrecomendable/bin/SynfigStudio-1.2.2-18.09.14-linux64-286f1 && ./SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage',
-        12: 'cd /home/jdcrecomendable/bin/eagle-9.2.0 && ./run'
+        12: 'cd /home/jdcrecomendable/bin/eagle-9.2.0 && ./run',
+        13: 'jupyter-notebook --no-browser'
     }
     try:
         to_run = insertion[flag]
@@ -44,6 +45,7 @@ Options:
   etcher          launch Etcher
   firefox         launch Firefox in a Private Window
   fritzing        launch Fritzing
+  jupyter         launch Jupyter Notebook without a browser
   mail            launch Thunderbird
   qt-creator      launch Qt Creator
   redshift        launch Redshift
@@ -67,7 +69,8 @@ if __name__ == '__main__':
             'qt-creator'      :  9,
             'etcher'          : 10,
             'synfig'          : 11,
-            'eagle'           : 12
+            'eagle'           : 12,
+            'jupyter'         : 13
         }
         try:
             run(options[sys.argv[1]])

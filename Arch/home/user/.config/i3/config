@@ -215,7 +215,7 @@ bindsym $mod+Mod1+Shift+v exec "pcmanfm /home/jdcrecomendable/Videos"
 # start-up commands
 exec redshift-gtk
 exec dropbox start
-exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T.png
+exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T2.png
 exec --no-startup-id xscreensaver -no-splash
 gaps inner 40
 

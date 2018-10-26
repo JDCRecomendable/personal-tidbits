@@ -15,6 +15,7 @@ Tools and config scripts here aim to facilitate increased productivity as well a
     * cdl
     * launch
     * mkdird
+    * toggle-network
     * toggle-touchpad
     * volume
     * volume-bluetooth

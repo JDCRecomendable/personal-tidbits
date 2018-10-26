@@ -84,6 +84,7 @@ echo "++  Browse the web.                                               ++  elin
 echo "++  Launch the calculator.                                        ++  bc                                                   ++"
 echo "++  Browse the dictionary for meanings.                           ++  dict (word)                                          ++"
 echo "++  Organise with a calendar or a to-do list.                     ++  calcurse                                             ++"
+echo "++  Securely delete a file and/or a directory.                    ++  wipe (file/directory name)                           ++"
 echo "++  Get system information.                                       ++  screenfetch                                          ++"
 echo "++  Get current processes.                                        ++  ps -fA                                               ++"
 echo "++  Kill a process.                                               ++  kill (PID)                                           ++"

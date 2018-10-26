@@ -24,7 +24,8 @@ def run(flag):
         10: 'cd /home/jdcrecomendable/bin/etcher-electron-1.4.5-x86_64 && ./etcher-electron-1.4.5-x86_64.AppImage',
         11: 'cd /home/jdcrecomendable/bin/SynfigStudio-1.2.2-18.09.14-linux64-286f1 && ./SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage',
         12: 'cd /home/jdcrecomendable/bin/eagle-9.2.0 && ./run',
-        13: 'jupyter-notebook --no-browser'
+        13: 'jupyter-notebook --no-browser',
+        14: 'cd /home/jdcrecomendable/Unity-2018.2.7f1/Editor && ./Unity'
     }
     try:
         to_run = insertion[flag]
@@ -50,7 +51,8 @@ Options:
   qt-creator      launch Qt Creator
   redshift        launch Redshift
   synfig          launch Synfig Studio
-  tor             launch Tor Browser'''
+  tor             launch Tor Browser
+  unity           launch Unity3D Editor'''
     print(help_doc)
 
 if __name__ == '__main__':
@@ -70,7 +72,8 @@ if __name__ == '__main__':
             'etcher'          : 10,
             'synfig'          : 11,
             'eagle'           : 12,
-            'jupyter'         : 13
+            'jupyter'         : 13,
+            'unity'           : 14
         }
         try:
             run(options[sys.argv[1]])

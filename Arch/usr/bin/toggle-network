@@ -1,0 +1,41 @@
+#!/usr/bin/python3
+
+# -*- coding: utf-8 -*-
+
+# Copyright (c) 2018 Jared Daniel Carbonell Recomendable. All rights reserved.
+
+import sys
+import subprocess
+
+com_get_status = 'nmcli n connectivity check'
+com_activate = 'nmcli n on'
+com_deactivate = 'nmcli n off'
+cannot_get_status = '\nUnable to get active status of network.\nExiting...\n'
+
+def check_network():
+    """Carry out the process of checking whether the network is active."""
+    status = subprocess.check_output(com_get_status, shell=True).decode()
+    if 'full' in status:
+        return True
+    return False
+
+def run():
+    """Carry out the process of toggling whether the network is active."""
+    status = check_network()
+    if status:
+        to_run = com_deactivate
+    else:
+        to_run = com_activate
+    subprocess.run(['bash', '-c', to_run])
+
+def show_help():
+    """Show the help documentation for the program."""
+    help_doc = '''Usage: toggle-network
+Simply toggles the network on or off.'''
+    print(help_doc)
+
+if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        run()
+    else:
+        show_help()

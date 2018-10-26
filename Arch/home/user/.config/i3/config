@@ -183,6 +183,8 @@ bindsym XF86MonBrightnessDown exec "sudo bri d"
 bindsym XF86MonBrightnessUp exec "sudo bri u"
 bindsym XF86AudioRaiseVolume exec "vol u"
 bindsym XF86AudioLowerVolume exec "vol d"
+bindsym XF86AudioMute exec "vol 0"
+bindsym $mod+F3 exec "toggle-network"
 
 # user-specified application launching key bindings
 bindsym $mod+z exec "leafpad"
@@ -190,6 +192,8 @@ bindsym $mod+Home exec "firefox --private-window"
 bindsym $mod+Shift+Home exec "chromium --incognito"
 bindsym $mod+Mod1+Home exec "pcmanfm"
 bindsym $mod+m exec "thunderbird"
+bindsym $mod+o exec "libreoffice"
+bindsym $mod+Shift+o exec "scribus"
 
 # user-specified administrative key bindings
 bindsym $mod+l exec "xscreensaver-command -lock"
@@ -215,6 +219,7 @@ bindsym $mod+Mod1+Shift+v exec "pcmanfm /home/jdcrecomendable/Videos"
 # start-up commands
 exec redshift-gtk
 exec dropbox start
+exec xpad
 exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T2.png
 exec --no-startup-id xscreensaver -no-splash
 gaps inner 40
@@ -228,17 +233,13 @@ bindsym $mod+Mod1+space scratchpad show
 # setting gaps between windows
 for_window [class=".*"] border pixel 4
 hide_edge_borders both
-set $mode_gaps Gaps: [o]uter, [i]nner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner [Left Arrow Key]: Decrease Gap | [Right Arrow Key]: Increase Gap | [Up Arrow Key]: Reset | [Down Arrow Key]: No Gap
 bindsym $mod+g mode "$mode_gaps_inner"
 mode "$mode_gaps_inner" {
-        bindsym plus         gaps inner all plus 4
-        bindsym KP_Add       gaps inner all plus 4
-        bindsym minus        gaps inner all minus 4
-        bindsym KP_Subtract  gaps inner all minus 4
-        bindsym 0            gaps inner all set 0
-        bindsym KP_0         gaps inner all set 0
+        bindsym Right  gaps inner all plus 4
+        bindsym Left   gaps inner all minus 4
+        bindsym Up     gaps inner all set 40
+        bindsym Down   gaps inner all set 0
 
         bindsym Return mode "default"
         bindsym Escape mode "default"

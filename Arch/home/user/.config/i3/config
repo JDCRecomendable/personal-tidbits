@@ -179,42 +179,44 @@ bar {
 }
 
 # user-specified laptop-key specific key bindings
-bindsym XF86MonBrightnessDown exec "sudo bri d"
-bindsym XF86MonBrightnessUp exec "sudo bri u"
-bindsym XF86AudioRaiseVolume exec "vol u"
-bindsym XF86AudioLowerVolume exec "vol d"
-bindsym XF86AudioMute exec "vol 0"
-bindsym $mod+F3 exec "toggle-network"
+bindsym  XF86MonBrightnessDown  exec "sudo bri d"
+bindsym  XF86MonBrightnessUp    exec "sudo bri u"
+bindsym  XF86AudioRaiseVolume   exec "vol u"
+bindsym  XF86AudioLowerVolume   exec "vol d"
+bindsym  XF86AudioMute          exec "vol 0"
+bindsym $mod+F3                exec "toggle-network"
 
 # user-specified application launching key bindings
-bindsym $mod+z exec "leafpad"
-bindsym $mod+Home exec "firefox --private-window"
-bindsym $mod+Shift+Home exec "chromium --incognito"
-bindsym $mod+Mod1+Home exec "pcmanfm"
-bindsym $mod+m exec "thunderbird"
-bindsym $mod+o exec "libreoffice"
-bindsym $mod+Shift+o exec "scribus"
+bindsym  $mod+z                 exec "leafpad"
+bindsym  $mod+Shift+z           exec "remarkable"
+bindsym  $mod+Shift+Mod1+z      exec "lyx"
+bindsym  $mod+Home              exec "firefox --private-window"
+bindsym  $mod+Shift+Home        exec "chromium --incognito"
+bindsym  $mod+Mod1+Home         exec "pcmanfm"
+bindsym  $mod+m                 exec "thunderbird"
+bindsym  $mod+o                 exec "libreoffice"
+bindsym  $mod+Shift+o           exec "scribus"
 
 # user-specified administrative key bindings
-bindsym $mod+l exec "xscreensaver-command -lock"
-bindsym $mod+p exec "lxrandr"
-bindsym $mod+F4 exec "shutdown now"
-bindsym $mod+F5 exec "shutdown -r now"
-bindsym Print exec "gnome-screenshot"
-bindsym $mod+x exec "gnome-screenshot -i"
-bindsym Mod1+F2 exec dmenu_run
+bindsym  $mod+l                 exec "xscreensaver-command -lock"
+bindsym  $mod+p                 exec "lxrandr"
+bindsym  $mod+F4                exec "shutdown now"
+bindsym  $mod+F5                exec "shutdown -r now"
+bindsym  Print                  exec "gnome-screenshot"
+bindsym  $mod+x                 exec "gnome-screenshot -i"
+bindsym  Mod1+F2                exec dmenu_run
 
 # user-specified directory-opening key bindings
-bindsym $mod+Mod1+d exec "launch dropbox"
-bindsym $mod+Mod1+h exec "cdl -H"
-bindsym $mod+Mod1+m exec "cdl -M"
-bindsym $mod+Mod1+p exec "cdl -P"
-bindsym $mod+Mod1+y exec "cdl -Y"
-bindsym $mod+Mod1+Shift+b exec "pcmanfm /home/jdcrecomendable/bin"
-bindsym $mod+Mod1+Shift+d exec "pcmanfm /home/jdcrecomendable/Documents"
-bindsym $mod+Mod1+Shift+p exec "pcmanfm /home/jdcrecomendable/Pictures"
-bindsym $mod+Mod1+Shift+m exec "pcmanfm /home/jdcrecomendable/Music"
-bindsym $mod+Mod1+Shift+v exec "pcmanfm /home/jdcrecomendable/Videos"
+bindsym  $mod+Mod1+d            exec "launch dropbox"
+bindsym  $mod+Mod1+h            exec "cdl -H"
+bindsym  $mod+Mod1+m            exec "cdl -M"
+bindsym  $mod+Mod1+p            exec "cdl -P"
+bindsym  $mod+Mod1+y            exec "cdl -Y"
+bindsym  $mod+Mod1+Shift+b      exec "pcmanfm /home/jdcrecomendable/bin"
+bindsym  $mod+Mod1+Shift+d      exec "pcmanfm /home/jdcrecomendable/Documents"
+bindsym  $mod+Mod1+Shift+p      exec "pcmanfm /home/jdcrecomendable/Pictures"
+bindsym  $mod+Mod1+Shift+m      exec "pcmanfm /home/jdcrecomendable/Music"
+bindsym  $mod+Mod1+Shift+v      exec "pcmanfm /home/jdcrecomendable/Videos"
 
 # start-up commands
 exec redshift-gtk

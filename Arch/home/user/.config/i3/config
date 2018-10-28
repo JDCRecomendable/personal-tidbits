@@ -196,6 +196,7 @@ bindsym  $mod+Mod1+Home         exec "pcmanfm"
 bindsym  $mod+m                 exec "thunderbird"
 bindsym  $mod+o                 exec "libreoffice"
 bindsym  $mod+Shift+o           exec "scribus"
+bindsym  $mod+Shift+Mod1+o      exec "sigil"
 
 # user-specified administrative key bindings
 bindsym  $mod+l                 exec "xscreensaver-command -lock"

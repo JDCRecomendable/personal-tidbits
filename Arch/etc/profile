@@ -67,7 +67,7 @@ echo "++  Activate a virtual private network (VPN).                     ++  sudo
 echo "++  Change Bluetooth settings.                                    ++  bluetoothctl                                         ++"
 echo "++  Adjust the speaker volume of this computer.                   ++  volume [0-100]                                       ++"
 echo "++  Adjust the microphone volume of this computer.                ++  alsamixer                                            ++"
-echo "++  Adjust the screen brightness of this computer.                ++  sudo brightness [0-7]                                ++"
+echo "++  Adjust the screen brightness of this computer.                ++  sudo brightness [0-(max)]                            ++"
 echo "++  Reboot this computer.                                         ++  shutdown -r now                                      ++"
 echo "++  Switch off this computer.                                     ++  shutdown now                                         ++"
 echo "++  Quit this shell.                                              ++  exit                                                 ++"

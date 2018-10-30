@@ -184,7 +184,7 @@ bindsym  XF86MonBrightnessUp    exec "sudo bri u"
 bindsym  XF86AudioRaiseVolume   exec "vol u"
 bindsym  XF86AudioLowerVolume   exec "vol d"
 bindsym  XF86AudioMute          exec "vol 0"
-bindsym $mod+F3                exec "toggle-network"
+bindsym  $mod+F3                exec "toggle-network"
 
 # user-specified application launching key bindings
 bindsym  $mod+z                 exec "leafpad"
@@ -244,6 +244,7 @@ mode "$mode_gaps_inner" {
         bindsym Up     gaps inner all set 40
         bindsym Down   gaps inner all set 0
 
+        bindsym $mod+g mode "default"
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }

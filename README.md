@@ -10,6 +10,7 @@ Tools and config scripts here aim to facilitate increased productivity as well a
       * i3/
         * config
       * redshift.conf
+    * .xinitrc
   * /usr/bin/
     * brightness
     * cdl

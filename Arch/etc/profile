@@ -39,6 +39,13 @@ unset TERMCAP
 # Man is much better than us at figuring this out
 unset MANPATH
 
+# Enable Theming in Qt5 Applications
+export QT_QPA_PLATFORMTHEME="qt5ct"
+# Additional Notes: The package "qt5ct" has to be installed and used in
+# conjunction with the above command to properly theme Qt5 applications.
+# Additionally, the package "qt4" can be installed to get "qtconfig-qt4",
+# a utility which enables theming in Qt4 applications.
+
 echo ""
 echo ""
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"

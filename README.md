@@ -2,6 +2,14 @@
 Tools and config scripts here aim to facilitate increased productivity as well as quick and easy transfer of preferences between computers respectively.
 
 ## Tidbits
+* Android
+  * /home/user/t-ui/
+    * alias.txt
+    * apps.xml
+    * behavior.xml
+    * suggestions.xml
+    * theme.xml
+    * ui.xml
 * Arch
   * /etc/
     * profile

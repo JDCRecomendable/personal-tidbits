@@ -1,0 +1,9 @@
+C1-Pho=Phone
+C2-Con=Contacts
+C3-Mes=Messaging
+C4-Int=Internet
+O1-Clo=Clock
+O2-Cal=Calendar
+O3-Calc=Calculator
+O4-Notes=Omni Notes FOSS
+WA=WhatsApp

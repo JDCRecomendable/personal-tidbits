@@ -18,12 +18,12 @@
 <time_format_separator value="@"/>
 <battery_medium value="50"/>
 <battery_low value="15"/>
-<device_format value="%d: %u"/>
+<device_format value="%d | %u"/>
 <network_info_format value="Internet     : %(Wi-Fi - %wn/%[Mobile Data - %d3/No Internet Access])"/>
 <battery_format value="Battery      : %(Charging - /)%v%"/>
 <storage_format value="Int. Storage : %iavgb GB of %itotgb GB (%iav%%)"/>
 <ram_format value="Avail. RAM   : %avgb GB of %totgb GB (%av%%)"/>
-<input_format value="%p %i"/>
+<input_format value="[%t1]%p %i"/>
 <output_format value="%o"/>
 <session_info_format value="%u@%d:%p"/>
 <enable_app_launch value="true"/>

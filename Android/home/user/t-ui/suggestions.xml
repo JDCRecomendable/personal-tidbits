@@ -23,8 +23,8 @@
 <click_to_launch value="true"/>
 <suggestions_size value="16"/>
 <double_space_click_first_suggestion value="true"/>
-<noinput_suggestions_order value="0(6)1(9)2(6)3(4)"/>
-<suggestions_order value="0(6)1(9)2(6)3(4)"/>
+<noinput_suggestions_order value="0(6)1(12)2(6)3(4)"/>
+<suggestions_order value="0(6)1(12)2(6)3(4)"/>
 <noinput_min_command_priority value="5"/>
 <file_suggestions_minrate value="-1"/>
 <app_suggestions_minrate value="-1"/>

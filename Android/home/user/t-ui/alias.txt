@@ -1,3 +1,4 @@
+cls=clear
 C1-Pho=Phone
 C2-Con=Contacts
 C3-Mes=Messaging

@@ -42,6 +42,7 @@ bindsym --release button2 kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
+bindsym Mod1+F2 exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -205,7 +206,6 @@ bindsym  $mod+F4                exec "shutdown now"
 bindsym  $mod+F5                exec "shutdown -r now"
 bindsym  Print                  exec "gnome-screenshot"
 bindsym  $mod+x                 exec "gnome-screenshot -i"
-bindsym  Mod1+F2                exec dmenu_run
 
 # user-specified directory-opening key bindings
 bindsym  $mod+Mod1+d            exec "launch dropbox"

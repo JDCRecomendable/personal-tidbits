@@ -46,7 +46,7 @@ Options:
   etcher          launch Etcher
   firefox         launch Firefox in a Private Window
   fritzing        launch Fritzing
-  jupyter         launch Jupyter Notebook without a browser
+  jupyter         launch Jupyter Notebook without launching a browser
   mail            launch Thunderbird
   qt-creator      launch Qt Creator
   redshift        launch Redshift

@@ -28,6 +28,15 @@ Tools and config scripts here aim to facilitate increased productivity as well a
     * toggle-touchpad
     * volume
     * volume-bluetooth
+* RPi
+  * /etc/
+    * profile
+  * /home/user/
+    * .config/
+      * i3/
+        *config
+      * redshift.conf
+    * .xinitrc
 * Ubuntu
   * /etc/
     * profile

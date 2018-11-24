@@ -78,3 +78,5 @@ echo "++  Get current processes.                                        ++  ps -
 echo "++  Kill a process.                                               ++  kill (PID)                                           ++"
 echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 echo ""
+echo "Insert this when connecting to a Bluetooth Speaker: bluealsa:HCI=hci0,DEV=<DEVICE_MAC_ADDRESS>,PROFILE=a2dp"
+echo ""

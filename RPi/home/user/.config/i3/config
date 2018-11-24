@@ -176,7 +176,6 @@ bindsym  $mod+Shift+o           exec "scribus"
 bindsym  $mod+Shift+Mod1+o      exec "sigil"
 
 # user-specified administrative key bindings
-bindsym  $mod+l                 exec "xscreensaver-command -lock"
 bindsym  $mod+p                 exec "lxrandr"
 bindsym  $mod+F4                exec "shutdown now"
 bindsym  $mod+F5                exec "shutdown -r now"
@@ -193,8 +192,6 @@ bindsym  $mod+Mod1+Shift+v      exec "pcmanfm /home/pi/Videos"
 
 # start-up commands
 exec redshift-gtk
-exec xpad
-exec --no-startup-id xscreensaver -no-splash
 
 # set up scratchpad
 for_window [title="__scratchpad"] move scratchpad

@@ -185,6 +185,7 @@ bindsym  $mod+x                 exec "gnome-screenshot -i"
 
 # user-specified directory-opening key bindings
 bindsym  $mod+Mod1+d            exec "pcmanfm /home/pi/Downloads"
+bindsym  $mod+Mod1+p            exec "pcmanfm /home/pi/Documents/Projects"
 bindsym  $mod+Mod1+Shift+d      exec "pcmanfm /home/pi/Documents"
 bindsym  $mod+Mod1+Shift+p      exec "pcmanfm /home/pi/Pictures"
 bindsym  $mod+Mod1+Shift+m      exec "pcmanfm /home/pi/Music"

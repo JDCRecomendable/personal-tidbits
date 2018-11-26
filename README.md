@@ -27,7 +27,6 @@ Tools and config scripts here aim to facilitate increased productivity as well a
     * toggle-network
     * toggle-touchpad
     * volume
-    * volume-bluetooth
 * RPi
   * /etc/
     * profile

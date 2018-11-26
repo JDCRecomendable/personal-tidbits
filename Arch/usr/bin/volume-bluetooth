@@ -8,7 +8,7 @@ import sys
 import subprocess
 
 # Need to change these when porting this program for other sinks or computers.
-sink = 1
+sink = 3
 
 # Default Commands and Error Messages
 errormsg = '\nUnable to get volume.\nExiting...\n'

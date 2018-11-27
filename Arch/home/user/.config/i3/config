@@ -225,6 +225,7 @@ exec dropbox start
 exec xpad
 exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T2.png
 exec --no-startup-id xscreensaver -no-splash
+exec --no-startup-id displaycal-apply-profiles
 gaps inner 40
 
 # set up scratchpad

@@ -219,7 +219,7 @@ bindsym  $mod+Mod1+Shift+p      exec "pcmanfm /home/jdcrecomendable/Pictures"
 bindsym  $mod+Mod1+Shift+m      exec "pcmanfm /home/jdcrecomendable/Music"
 bindsym  $mod+Mod1+Shift+v      exec "pcmanfm /home/jdcrecomendable/Videos"
 
-# start-up commands
+# start-up commands (do look at /etc/xdg/autostart)
 exec redshift-gtk
 exec dropbox start
 exec xpad

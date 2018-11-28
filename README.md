@@ -33,7 +33,7 @@ Tools and config scripts here aim to facilitate increased productivity as well a
   * /home/user/
     * .config/
       * i3/
-        *config
+        * config
       * redshift.conf
     * .xinitrc
 * Ubuntu

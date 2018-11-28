@@ -223,6 +223,7 @@ bindsym  $mod+Mod1+Shift+v      exec "pcmanfm /home/jdcrecomendable/Videos"
 exec redshift-gtk
 exec dropbox start
 exec xpad
+exec start-pulseaudio-x11
 exec --no-startup-id feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T2.png
 exec --no-startup-id xscreensaver -no-splash
 exec --no-startup-id xiccd

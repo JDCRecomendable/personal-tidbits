@@ -73,7 +73,6 @@ echo "++  Adjust firewall settings.                                     ++  ufw 
 echo "++  Activate a virtual private network (VPN).                     ++  sudo pvpn -c                                         ++"
 echo "++  Change Bluetooth settings.                                    ++  bluetoothctl                                         ++"
 echo "++  Adjust the speaker volume of this computer.                   ++  volume [0-100]                                       ++"
-echo "++  Adjust the Bluetooth speaker volume, if connected.            ++  volume-bluetooth [0-100]                             ++"
 echo "++  Adjust the advanced volume settings on this computer.         ++  pavucontrol                                          ++"
 echo "++  Adjust the microphone volume of this computer.                ++  alsamixer                                            ++"
 echo "++  Adjust the screen brightness of this computer.                ++  sudo brightness [0-(max)]                            ++"

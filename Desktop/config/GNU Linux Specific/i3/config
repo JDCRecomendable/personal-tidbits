@@ -215,6 +215,7 @@ bindsym $mod+Mod1+Shift+v exec "pcmanfm /home/jdcrecomendable/Videos"
 # start-up (also look up /etc/xdg/autostart, if any)
 exec "xpad"
 exec "start-pulseaudio-x11"
+exec --no-startup-id "feh --bg-fill /home/jdcrecomendable/Pictures/Wallpapers/STD_T3_SD.png"
 exec --no-startup-id "xscreensaver -no-splash"
 gaps inner $defaultgaps
 exec "sleep 3 && redshift"
